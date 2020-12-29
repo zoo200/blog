@@ -99,9 +99,9 @@ resource "aws_security_group" "test-sg-lb"{
 }
 
 ## セキュリティグループ サーバ用
-resource "aws_security_group" "test-sg-sever" {
-  description = "test-sg-sever"
-  name   = "test-sg-sever"
+resource "aws_security_group" "test-sg-server" {
+  description = "test-sg-server"
+  name   = "test-sg-server"
 
   egress {
     cidr_blocks = ["0.0.0.0/0"]
@@ -161,7 +161,7 @@ resource "aws_instance" "test-server-east" {
   }
 
   subnet_id              = aws_subnet.test-sub-east.id
-  vpc_security_group_ids = [aws_security_group.test-sg-sever.id]
+  vpc_security_group_ids = [aws_security_group.test-sg-server.id]
 }
 
 ## EC2 2台目
@@ -189,7 +189,7 @@ resource "aws_instance" "test-server-west" {
   }
 
   subnet_id              = aws_subnet.test-sub-west.id
-  vpc_security_group_ids = [aws_security_group.test-sg-sever.id]
+  vpc_security_group_ids = [aws_security_group.test-sg-server.id]
 }
 
 ## ターゲットグループ
