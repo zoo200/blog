@@ -42,3 +42,4 @@ backend.hcl
 *.swo
 
 .terragrunt-cache
+.terraform.lock.hcl
