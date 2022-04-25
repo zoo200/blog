@@ -1,7 +1,7 @@
 ## ローカル変数定義
 locals {
   ## Terraform Cloudの組織名を設定
-  organization="zootest20220424"
+  organization="zoo200-demo"
 
   ## Terraform Cloudのクレデンシャルファイルからjqコマンドで情報を取得
   tmp_token = "${run_cmd("jq", "-r",".credentials[\"app.terraform.io\"].token", "${get_env("HOME")}/.terraform.d/credentials.tfrc.json")}"
