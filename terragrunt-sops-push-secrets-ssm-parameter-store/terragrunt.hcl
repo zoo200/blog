@@ -19,13 +19,13 @@ EOF
 remote_state {
   backend = "local"
   config = {
-    path = "./tfstate.d/kms/terraform.tfstate"
+    path = "./tfstate.d/ssm/terraform.tfstate"
   }
 }
 
 ## terraformのファイル読み込み
 terraform {
-  source          = "./modules/kms"
+  source          = "./modules/ssm"
 }
 
 ## 機密情報をterraformへ渡す
