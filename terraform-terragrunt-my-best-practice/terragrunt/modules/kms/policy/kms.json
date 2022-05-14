@@ -1,0 +1,15 @@
+{
+  "Id": "key-consolepolicy",
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "Enable IAM User Permissions",
+          "Effect": "Allow",
+          "Principal": {
+              "AWS": "arn:aws:iam::${account-id}:root"
+          },
+          "Action": "kms:*",
+          "Resource": "*"
+      }
+  ]
+}
