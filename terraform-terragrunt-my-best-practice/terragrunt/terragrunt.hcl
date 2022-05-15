@@ -5,6 +5,10 @@ locals {
   env = get_env("TF_ENV")
 
   module-name = "${trimprefix(path_relative_to_include(),"exec.d/")}"
+  
+  # Terraform Cloudをバックエンドに利用するときは [環境-モジュール] をワークスペース名に設定すると重複を回避できます。
+  # https://zoo200.net/terragrunt-create-terraform-cloud-workspace/
+  # https://github.com/zoo200/blog/blob/main/terragrunt-create-terraform-cloud-workspace/terragrunt.hcl#L11
   workspace = "${local.env}-${local.module-name}"
 
   tfbe = "${local.organization}-${local.env}-terraform-backend"
