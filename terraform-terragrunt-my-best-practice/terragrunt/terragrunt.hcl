@@ -1,4 +1,5 @@
 locals {
+  # 適宜変更
   organization="zoo200"
   region = "ap-northeast-1"
 
