@@ -60,7 +60,7 @@ terraform {
   source = "${path_relative_from_include()}/modules/${local.module-name}"
 }
 
-## 機密情報をterraformへ渡す
+## 変数をterraformへ渡す
 inputs = merge(
   {
     env = local.env,
