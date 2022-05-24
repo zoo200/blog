@@ -70,10 +70,4 @@ resource "aws_lb_listener_rule" "ecs" {
 
   listener_arn = aws_lb_listener.demo.arn
   priority     = "10"
-
-  lifecycle {
-    ignore_changes = [
-      action[0].target_group_arn,
-    ]
-  }
 }
