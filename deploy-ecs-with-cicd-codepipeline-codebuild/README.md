@@ -1,1 +1,1 @@
-# demo-app
+[CodePipelineとCodeBuildのCI/CDでGitHubからECSへデプロイする](https://zoo200.net/deploy-ecs-with-cicd-codepipeline-codebuild/)で使用するビルド用の設定ファイル群
