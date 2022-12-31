@@ -1,0 +1,1 @@
+[AWS FargateのFireLens(FluentBit)でログをCloudWatchとS3へ出力する](https://zoo200.net/fargate-firelens-to-cloudwatch-s3/)のサンプルコード
